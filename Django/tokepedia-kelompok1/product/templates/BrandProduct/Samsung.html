@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <!--Main Navigation-->
+    <br>
+    <div class="container my-4 pt-3">
+        <div class="row pt-3">
+            <!-- <div class="col"></div> -->
+            {% for prodSamsung in Samsungprod %}
+            <div class="col pr-3 z-depth-1">
+                <a href="{{prodSamsung.id}}">
+                    <img src="{% static prodSamsung.image.url %}" width="150">
+                    <hr>
+                    <p>{{prodSamsung.name}}
+                        <br><span class="text-warning font-weight-bold">Rp.{{prodSamsung.price_per_unit}}</span>
+                    </p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row pt-5 pb-5">
+            {% for prodSamsung2 in Samsungprod2 %}
+            <div class="col pr-3 z-depth-1">
+                <a href="{{prodSamsung2.id}}">
+                    <img src="{% static prodSamsung2.image.url %}" width="150">
+                    <hr>
+                    <p>{{prodSamsung2.name}}
+                        <br><span class="text-warning font-weight-bold">Rp.{{prodSamsung2.price_per_unit}}</span>
+                    </p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock content %}

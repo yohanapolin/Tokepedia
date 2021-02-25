@@ -1,0 +1,136 @@
+.cart{
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+  
+  margin-left: 50px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.checkout{
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+  margin-left: 5%;
+  height: 200px;
+}
+h4{
+  margin-left: 50px;
+  padding-bottom: 0px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+  }
+  .btn-checkout {
+    background-color:#FF8E0A;
+    color: #ffffff ;
+    width: 80%;
+    height: 3em;
+    border-radius:30px;
+    font-weight: bold; 
+    font-size: 13px;
+    margin-top: 10px;
+  }
+.btn-checkout:hover {
+    background-color: #FF8E0A;
+    font-weight: bold;
+}
+
+
+.table {
+   border:none;
+}
+.quantity {
+  width: 2.5em;
+  height: 1.5em;
+}
+.plus-min{
+  width: 1em;
+  height: 1em;
+}
+button {
+  border: none;
+}
+
+.price{
+  font-size: 15px;
+  font-weight: lighter;
+  color: #FF8E0A;
+  padding-bottom:  5px;
+
+}
+
+td{
+  font-size: 13px;
+}
+
+@media (max-width: 680px) {
+    .cart{
+  
+  padding:10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: #ffffff;
+}
+
+.container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.minus, .plus{
+   visibility: hidden !important;
+}
+.second-navbar {
+  margin-top: 85px;
+}
+
+.second-navbar-top-nav-collapse {
+  margin-top: 45px;
+}
+}
+.view {
+  background: #ffffff;
+  background-size: cover;
+}
+html,
+body,
+header,
+.view {
+height: 130px;
+}
+
+.input-group.md-form.form-sm.form-1 input{
+border: 1px solid #bdbdbd;
+border-top-right-radius: 0.25rem;
+border-bottom-right-radius: 0.25rem;
+}
+.input-group.md-form.form-sm.form-2 input {
+border: 1px solid #bdbdbd;
+border-top-left-radius: 0.25rem;
+border-bottom-left-radius: 0.25rem;
+}
+.input-group.md-form.form-sm.form-2 input.red-border {
+border: 1px solid #ef9a9a;
+}
+.input-group.md-form.form-sm.form-2 input.lime-border {
+border: 1px solid #cddc39;
+}
+.input-group.md-form.form-sm.form-2 input.amber-border {
+border: 1px solid #ffca28;
+}
+
+.btn-sl{
+border-radius:50px;
+}
+
+.center-item { 
+          position: absolute; 
+          left: 50%; 
+          transform: translatex(-50%); 
+      } 
+
+.second-navbar {
+margin-top: 85px;
+}
+
+.second-navbar-top-nav-collapse {
+margin-top: 45px;
+}

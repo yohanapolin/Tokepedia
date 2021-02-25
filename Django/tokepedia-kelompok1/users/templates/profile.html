@@ -1,0 +1,56 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<!-- content -->
+<section id="content" class="content">
+    <div class="container ">
+        <div class="row  pb-5 justify-content-center">
+            <div class="col-3 pt-5">
+                <div class="list-group z-depth-1">
+                    <a href="/user/profile" class="list-group-item list-group-item-action list-group-item-light text-warning"><i class="fas fa-user mr-3 pr-3"></i>Profile</a>
+                    <a href="/user/editprofile" class="list-group-item list-group-item-action list-group-item-light"><i class="fas fa-user-edit mr-3 pr-2"></i> Edit Profile</a>
+                    <a href="/user/history" class="list-group-item list-group-item-action list-group-item-light"><i class="fas fa-history mr-3 pr-3"></i>History</a>
+                    <a href="/user/chart" class="list-group-item list-group-item-action list-group-item-light"><i class="fas fa-chart mr-3 pr-3"></i>Statistic</a>
+                </div>
+            </div>
+
+            <div class="col-8 pt-5">
+                <div class="col">
+                    <p class="h4 mb-4 ">My Profile</p>
+                    {% if user.is_authenticated %}
+                    <form class="text-left border border-light p-5 z-depth-1">
+                        <div class="mb-3">
+                            {% for prof in Profile %}
+                            <label for="Input1" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" value="{{prof.full_name}}" disabled>
+                            <br>
+                            <label for="Input2" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="{{prof.email}}" disabled> 
+                            <br>
+                            <label for="Input3" class="form-label">Birth Date</label>
+                            <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="{{profile.birth}}" disabled>
+                            <br>
+                            <label for="Input4" class="form-label">Address</label>
+                            <input type="address" class="form-control" id="exampleFormControlInput1" placeholder="{{profile.address}}" disabled>
+                            <button type="button" class="btn btn-light btn-sm my-3">Add Address</button>
+                            <br>
+                            <label for="Input5" class="form-label">Phone Number</label>
+                            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="{{profile.phone_number}}" disabled>
+                            <button type="button" class="btn btn-light btn-sm my-3">Add Phone Number</button>
+
+                        </div>
+                        <br>
+                        {% endfor %}
+                        <a class="btn btn-warning btn-block " type="button " href="/user/editprofile">Edit</a> 
+                        {% endif %}
+                    </form>
+
+                </div>
+            </div>
+        </div>
+</section>
+<!-- end of content -->
+
+<br></br>
+
+<!-- footer -->
+{% endblock content %}

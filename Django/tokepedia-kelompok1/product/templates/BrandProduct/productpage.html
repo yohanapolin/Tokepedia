@@ -1,0 +1,211 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+ <link rel="stylesheet" href="{% static 'css/page Product.css' %}">
+
+<script src="js/addons/rating.js"></script>
+    <div class="container-fluid mt-5 my-5 ">
+        
+        <div class="row">
+            <div class="col-md-2">
+                <ul>
+                    <img alt="Bootstrap Image Preview" src="{% static 'img/HTB-1.png' %}" class="rounded" height="100 " ></ul>
+           <ul><img alt="Bootstrap Image Preview " src="{% static 'img/HTB-4.png' %} " class="rounded " height ="100 "></ul>
+            <ul><img alt="Bootstrap Image Preview " src="{% static 'img/HTB.png' %} " class="rounded " height ="100 "></ul>
+            <ul><img alt="Bootstrap Image Preview " src="{% static 'img/HTB-5.png' %} " class="rounded " height ="100 "></ul>
+            <ul><img alt="Bootstrap Image Preview " src="{% static 'img/HTB-3.png' %} " class="rounded " height ="100 "></ul>
+    </div>
+
+
+    {% for object in Produk %}
+    <div class="col-md-5 ">
+      <img src=" {% static object.image.url %}" class="img-fluid " width="1000 ">
+    </div>
+    <div class="col-md-5 ">
+      <div class="row ">
+        <div class="col-md-4 ">
+        </div>
+        <div class="col-md-4 ">
+        </div>
+        <div class="col-md-4 ">
+        </div>
+      </div>
+
+      <div class ="container row ">
+      <div class="col-md-5 ">
+      <span id="rateMe1 ">
+      <div>
+      <span class="fa fa-star "></span>
+      <span class="fa fa-star "></span>
+      <span class="fa fa-star "></span>
+      <span class="fa fa-star "></span>
+      <span class="fa fa-star "></span>
+      </span>
+      </div>
+      <div class="mdb-rating rate-popover "> </div>
+      </div>
+      <div class ="col-md-4 ">
+        <p class=" " > 10 customer riview </p>
+      </div>
+      <div class="col-md-3 ">
+       
+       <p> {{object.id}}</p>
+      </div>
+    </div>
+
+    <div class ="col-md-12 ">
+       <h3 class="font-weight-bolder ">{{object.name}}</h3>
+       <h4 class="font-weight-bolder ">Rp. {{object.price_per_unit}}</h4>
+      <div class ="text-success font-weight-bolder ">{{object.description}}</div>
+    </div>
+    <div class ="container mr-1 mx-1 ">
+      <div class="row mt-sm-2 my-sm-2 ">
+        <div class="col-md-3 py-sm-1 ">
+        <span class="font-weight-bold ">Color</span>
+        </div>
+        <div class="mr-sm-0 mx-sm-2 ">
+
+          <button type="button " class="btn-product btn-outline-warning waves-effect btn-product mr-2 mx-2 ">
+           Black
+          </button>
+        </div>
+        <div class="mr-sm-0 mx-sm-2 ">
+
+          <button type="button " class="btn-product btn-product mr-2 mx-2 ">
+            white
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class ="container mr-1 mx-1 ">
+      <div class="row mt-sm-2 my-sm-2 ">
+        <div class="col-md-3 py-sm-1 ">
+          <span class="font-weight-bold "> RAM </span>
+        </div>
+        <div  class="mr-sm-0 mx-sm-2 " >
+
+          <button type="button " class="btn-product mr-2 mx-2 ">
+          <span >16 gb </span>
+          </button>
+        </div >
+        <div class="mr-sm-0 mx-sm-2 " >
+
+          <button type="button " class="btn-product mr-2 mx-2 ">
+            <span>32 gb</span>
+          </button>
+        </div>
+        <div class="mr-sm-0 mx-sm-2 ">
+
+          <button type="button " class="btn-product mr-2 mx-2 ">
+            <span> 64gb </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+      <div class="container mt-sm-4 my-sm-4 text-center " >
+        <div class="row ml-sm-1 mx-sm-1 add-cart " >
+        <div class="col-md-4 pt-sm-1 py-sm-3 ">
+          <h5 class="font-weight-bold ">
+            
+          </h5>
+        </div>
+        <div class="col-md-4 pt-sm-0 py-sm-1 ">
+           <!--<form  method="POST" action="/add_cart" >
+             {% csrf_token %}
+            
+               <input type="hidden" id="id" name="id" value="{{user.id}}">
+              <input type="hidden" id="products_id" name="products_id" value="{{object.id}}">
+                <input class="form-control mr-sm-2" name="quantity" type="number" value="1" min="1" max="{{object.quantity}}">
+          <button type="submit " class="btn-product btn btn-warning ">
+                        add to cart
+                 
+          </button>
+
+    
+        </form> --->
+        {% include 'BrandProduct/snippet/cart-update.html' with product=object cart=cart %}
+        </div>
+        <div class="col-md-4 pt-sm-0 py-sm-2 float-left ">
+
+          <a class="btn-floating btn-sm ">
+            <i class="fas fa-heart fa-2x amber-text waves-effect " aria-hidden="true "></i></a>
+
+        </div>
+        </div>
+      </div>
+
+        <div class ="container ">
+      <div class="row ">
+        <div class="col-md-3 py-sm-3 ">
+        <p class="font-weight-bold ">Delivery :</p>
+        </div>
+          <div class="mr-sm-0 mx-sm-2 ">
+            <img alt="Bootstrap Image Preview " src="{% static 'img/Logo JNE.png' %} " class="rounded " width="70px ">
+          </div>
+    </div>
+    <div class="row ">
+        <div class="col-md-3 py-sm-3 ">
+        <p class="font-weight-bold ">Payment :</p>
+        </div>
+        <div class="mr-sm-0 mx-sm-2 ">
+            <img alt="Bootstrap Image Preview " src="{% static 'img/mandiri.png' %} " class="rounded " width="70px ">
+             <img alt="Bootstrap Image Preview " src="{% static 'img/bca.jpg' %} " class="rounded " width="70px ">
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+ 
+<div class="container bootstrap snippets bootdey col-12 ">
+    <div class="row">
+    <div class="col-md-12">
+        <div class="blog-comment">
+                
+                <h3 class="text-warning">Product Discussions</h3>
+                
+                <hr/>
+        <ul class="comments">
+        <li class="clearfix">
+                    {% for comment in comment %}
+          <img src="https://bootdey.com/img/Content/user_1.jpg" class="avatar" alt="">
+          <div class="post-comments">
+                   
+              <p class="meta"> <a href="#"></a> {{comment.user.username}} ssays : <i class="pull-right"><a href="#"><small>Reply</small></a></i></p>
+              <p>
+                        {{comment.comment}}
+                      </p>
+                     
+                  </div>
+                  {% endfor %}
+        </li>
+        
+        </li>
+        </ul>
+        <form method="POST">
+          {% csrf_token %}
+          <input type="hidden" id="user" name="user" value="{{user.id}}">
+          <input type="hidden" id="product" name="product" value="{{object.id}}">
+          <p class="h4 mb-4 text">Add Discussion</p>
+         <textarea id="textarea" class="form-control mb-4", name='comment', placeholder="Add Discussion"></textarea>
+          <button class="btn btn-info btn-block" type="submit">Submit</button>
+      </form>
+      
+      </div>
+
+    </div>
+
+  </div>
+ 
+</div>
+MDB icon 
+</body>
+  {% endfor %}
+
+  {% endblock content %}

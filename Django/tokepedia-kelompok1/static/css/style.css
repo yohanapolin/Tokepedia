@@ -1,0 +1,96 @@
+/* .view {
+    background: #ffffff background-size: cover;
+} */
+
+html,
+body,
+header,
+.view {
+    height: 130px;
+}
+
+.input-group.md-form.form-sm.form-1 input {
+    border: 1px solid #bdbdbd;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.input-group.md-form.form-sm.form-2 input {
+    border: 1px solid #bdbdbd;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.input-group.md-form.form-sm.form-2 input.red-border {
+    border: 1px solid #ef9a9a;
+}
+
+.input-group.md-form.form-sm.form-2 input.lime-border {
+    border: 1px solid #cddc39;
+}
+
+.input-group.md-form.form-sm.form-2 input.amber-border {
+    border: 1px solid #ffca28;
+}
+
+.btn-sl {
+    border-radius: 50px;
+}
+
+.center-item {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.second-navbar {
+    margin-top: 85px;
+}
+
+.second-navbar-top-nav-collapse {
+    margin-top: 45px;
+}
+
+@media (max-width: 740px) {
+    html,
+    body,
+    header,
+    .carousel {
+        height: 100vh;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+    html,
+    body,
+    header,
+    .carousel {
+        height: 100vh;
+    }
+}
+
+.view,
+body,
+html {
+    height: 100%
+}
+
+.carousel {
+    height: 50%
+}
+
+.carousel .carousel-inner,
+.carousel .carousel-inner .active,
+.carousel .carousel-inner .carousel-item {
+    height: 100%
+}
+
+@media (max-width:776px) {
+    .carousel {
+        height: 100%
+    }
+}
+
+.page-footer {
+    background-color: #929FBA
+}

@@ -1,0 +1,115 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<div class="container-all">
+<div class="container-button py-2, px-5" style="border-radius: 30px;">
+    <div class="shadow p-3 mb-5 bg-white rounded-lg">
+        <div class="row p-2">
+            <div class="col-md-4">
+                <a class="nav-link" href="/user/history">
+                    <button type="button" class="btn btn-warning ml-5 " style="border-radius :30px;">
+							All History
+						</button>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="nav-link" href="/user/history">
+                    <button type="button" class="btn btn-outline-dark mx-5" style="border-radius :30px;">
+						Finished
+					</button>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="nav-link" href="/user/history">
+                    <button type="button" class="btn btn-outline-dark ml-5" style="border-radius : 30px;">
+						Cancelled
+					</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-item px-5 ">
+    <div class="shadow p-2 mb-5 bg-white rounded-lg">
+        <div class="row">
+            <div class="col">
+                {% for histo in historydb %}
+                <img class="ml-5" src="{% static 'img/History.png' %}" width="170">
+            </div>
+            <div class="col">
+                <p class="m-3 py-5">
+                    {{histo.product_name}}
+                    <br> x 1
+                </p>
+            </div>
+            <div class="col">
+                <p class="m-3 p-5 text-warning font-weight-bold">
+                    <b>{{ histo.price}}</b>
+                </p>
+            </div>
+        </div>
+        <div class="row px-3 ml-4">
+            <div class="col-md-12">
+                <hr>
+                <h4 class="pt-3 font-weight-bold">Address</h4>
+                </p>
+                <p class="pb-3">
+                    {{ histo.name}} (+62)85904672569
+                    <br>{{ histo.adress}}
+                    <br><b>{{ histo.date}}</b>
+                </p>
+                <hr>
+            </div>
+        </div>
+        <div class="row px-3">
+            <div class="col-md-8">
+            </div>
+            <div class="col-md-4">
+                <p>
+                    Subtotal Product : {{ histo.price}}
+                    <br>
+                    <hr>Delivery Fee : {{ histo.delivery}}
+                    <br>
+                    <hr><b>Total : <span class="Total"> {{ histo.total_cost}} </span></b>
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row px-3">
+
+            <div class="col-md-8">
+            </div>
+            <div class="col-md-4">
+                <p><span class="text-secondary">Payment Method</span> : {{ histo.payment_method}}
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<br>
+</div>
+
+<footer class="page-footer font-small black fixed-bottom">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-2 ">© All Right Reserved By Kelompok Satu
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- End your project here-->
+
+<!-- jQuery -->
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+<!-- Your custom scripts (optional) -->
+<script type="text/javascript"></script>
+
+</body>
+
+
+{% endblock content %}

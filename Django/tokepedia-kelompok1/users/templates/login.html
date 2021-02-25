@@ -1,0 +1,75 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}  
+    <div class="container pt-4">
+        <div class="card" style="width: 1000px; margin: 50px; padding: 20px;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mt-4">
+                            <h3 class="font-weight-bold">LOGIN</h3>
+                        </div>
+                        <hr size="90%" noshade>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <form method="post">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">
+                                    <b>Username</b>
+                                </label>
+                                        <input type="username" name="username" placeholder="Input your email" class="form-control" id="exampleInputEmail1">
+                                    </div>
+                                    <div class="form-group">
+
+                                        <label for="exampleInputPassword1">
+                                    <b>Password</b>
+                                </label>
+                                        <input type="password" name="password" placeholder="Input your password" class="form-control" id="exampleInputPassword1">
+                                    </div>
+                                    <div>
+                                        <button type="submit" class="btn btn-login btn-block" style="background-color: #e8aa00;">
+                                      Login  </button>
+                                    </div>
+                                    <p> {% for message in messages%} {{message}} {% endfor %}
+                                    </p>
+                                </form>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button type="button" class="btn btn-link" style="color: #ca9503 ;">Forgot
+                                    Password?</button>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <p>
+                                    Login with
+                                </p>
+                                <button type="button" class="btn btn-google btn-block" style="background-color: #db3236; margin-bottom: 10px;">
+                            Google
+                        </button>
+                                <button type="button" class="btn btn-facebook btn-block" style="background-color: #2f69dd; margin-bottom: 10px;">
+                            Facebook
+                        </button>
+                                <button type="button" class="btn btn-twitter btn-block" style="background-color:#1da1f2;">
+                            Twitter
+                        </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br></br>
+</body>
+
+    <!-- Copyright -->
+{% endblock content %}

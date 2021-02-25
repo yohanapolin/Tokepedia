@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  
+
+    <!--Main Navigation-->
+    <br>
+    <div class="container my-4 pt-3">
+        <div class="row pt-3">
+            <!-- <div class="col"></div> -->
+            {% for prodphone in CSmartphone %}
+            <div class="col pr-3 z-depth-1">
+                <a href="{{prodphone.id}}">
+                    <img src="{% static prodphone.image.url %}" width="150">
+                    <hr>
+                    <p><a href='{{prodphone.id}}'>{{prodphone.name}} </a>
+                        <br><span class="text-warning font-weight-bold">Rp.{{prodphone.price_per_unit}}</span>
+                    </p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row pt-5 pb-5">
+            {% for prodphone2 in CSmartphone2 %}
+            <div class="col pr-3 z-depth-1">
+                <a href="productDetail/{{prodphone2.id}}">
+                    <img src="{% static prodphone2.image.url %}" width="150">
+                    <hr>
+                    <p><a href='productDetail/{{prodphone2.id}}'>{{prodphone2.name}}</a>
+                        <br><span class="text-warning font-weight-bold">Rp.{{prodphone2.price_per_unit}}</span>
+                    </p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock content %}

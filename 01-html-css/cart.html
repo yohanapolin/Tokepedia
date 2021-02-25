@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Your Cart</title>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design for Bootstrap</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/TOKEPEDIA.png" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/cart.css">
+
+  </head>
+   <!-- Start your project here-->
+   <body > 
+   <header>
+	<!--Navbar -->
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light justify-content-start white">
+      <a class="navbar-brand" href="#"><img src="img/TOKEPEDIA.png" class="img-fluid" alt="TOKEPEDIA logo" width="250"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="input-group md-form form-sm form-2 pl-5 pr-5 pt-1 w-50 center-item ">
+      <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search" aria-label="Search">
+      <div class="input-group-append">
+        <span class="input-group-text amber lighten-3" id="basic-text1"><i class="fas fa-search text-grey"
+          aria-hidden="true"></i></span>
+        </div>
+      </div>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <a class="nav-link"><i class="fas fa-shopping-cart"></i></a>
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item">
+            <a class="nav-link"><button type="button" class="btn btn-outline-amber waves-effect btn-sm btn-sl ">Login</button></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"><button type="button" class="btn btn-amber btn-sm btn-sl ">Sign Up</button></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light second-navbar fixed-top justify-content-center pb-0 pt-0 white">
+      <!-- Collapsible content -->
+      <ul class="nav justify-content-center lighten-3">
+        <li class="nav-item">
+          <a class="nav-link  dark-grey-text" href="#!">Apple</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  dark-grey-text" href="#!">ASUS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  dark-grey-text" href="#!">Samsung</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  dark-grey-text" href="#!">Huawei</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  dark-grey-text" href="#!">Logitech</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  dark-grey-text" href="#!">Kingston</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle dark-grey-text amber" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+          aria-expanded="false">Category</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Laptop</a>
+            <a class="dropdown-item" href="#">Smartphone</a>
+            <a class="dropdown-item" href="#">Accessories</a>
+        </li>
+      </ul>
+      <!-- Collapsible content -->
+    </nav>
+  </header>
+  <!--Main Navigation-->
+  
+	<div class ="container ">
+		<div class="row">
+		   <div class="col-md-12 ">
+				<h4> Your Cart </h4>
+				<div class="row">
+				 <div class="col-md-7  cart">
+					 <table class="table">
+						 <thead class="amber">
+							 <tr>
+								 <th> </th>
+								 <th  class ="font-weight-bold"   > Item </th>
+								 <th> </th>
+								 <th  class ="font-weight-bold" >Price </th>
+								 <th  class ="font-weight-bold" >Quantity</th>
+							 </tr>
+						 </thead>
+
+						 <tbody>
+							 <tr>
+								 <td class="far fa-circle fa-1x">
+								 </td>
+								 <td><img src="img/table1.png">
+								 </td>
+								 <td > <a href="#" class="title-product">Lenovo P8 Tab3 8 plus TB </a> 
+								 </td>
+								 <td> Rp 2.500.000,00 </td>
+								 <td><button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus">
+									 <i class="fas fa-minus fa-1x "></i>
+									 </button>
+									 <input class="quantity" min="0" name="quantity" value="1" type="number">
+									 <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">
+									 <i class="fas fa-plus fa-1x "></i>
+									 </button>
+								 </td>
+							 </tr>
+							 <tr>
+								 <td class="far fa-circle fa-1x">
+								 </td>
+								 <td><img src="img/table2.png">
+								 </td>
+								 <td > <a href="#" class="title-product">8.0 Inch CHUWI Hi8 Air </a>
+								 </td>
+								 <td> Rp 2.500.000,00 </td>
+								 <td><button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus">
+									 <i class="fas fa-minus fa-1x"></i>
+									 </button>
+									 <input class="quantity" min="0" name="quantity" value="1" type="number">
+									 <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">
+									 <i class="fas fa-plus fa-1x"></i>
+									 </button>	
+								 </td>
+							 </tr>
+							 <tr>
+								 <td class="far fa-circle fa-1x">
+								 </td>
+								 <td><img src="img/table3.png">
+								 </td>
+								 <td > <a href="#" class="title-product" >BMXC 2018 Android 7.0 OS 10  </a>
+								 </td>
+								 <td> Rp 12.500.000,00 </td>
+								 <td><button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus">
+									 <i class="fas fa-minus fa-1x"></i>
+									 </button>
+									 <input class="quantity" min="0" name="quantity" value="1" type="number">
+									 <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">
+									 <i class="fas fa-plus fa-1x"></i>
+									 </button>
+								 </td>
+							 </tr>
+							 <tr>
+								 <td class="far fa-circle fa-1x">
+								 </td>
+								 <td><img src="img/table4.png">
+								 </td>
+								 <td > <a href="#" class="title-product">FULCOL DHL Free 10 inch </a> 
+								 </td>
+								 <td> Rp 2.500.000,00 </td>
+								 <td><button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus">
+									 <i class="fas fa-minus fa-1x"></i>
+									 </button>
+									 <input class="quantity" min="0" name="quantity" value="1" type="number">
+									 <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">
+									 <i class="fas fa-plus fa-1x"></i>
+									 </button>
+								 </td>
+							 </tr>
+						 </tbody>
+					 </table>
+				 </div>
+
+				 <div class="checkout col-md-3 ">
+					 <span class ="font-weight-bold"> Subtotal (2 items): </span>
+				 <div class ="price"><span> Rp 2.500.000,00 <span>
+				 </div>
+				 <div class ="price"><span> Rp 2.500.000,00 <span>
+				 </div>
+				 <div ><span class ="font-weight-bold"> Total : </span>
+				 </div>
+				 <div  class ="price"> Rp 5.000.000,00
+				 </div>
+				 <div class="text-center"> <button type="button" class=" btn-checkout">Checkout</button> </div> 
+				 </div>
+			 </div>
+		 </div>
+	 </div>
+ </div>
+
+	</body>
+	
+	<footer class="page-footer font-small black">
+
+		<!-- Copyright -->
+		<div class="footer-copyright text-center py-3 sticky-bottom">© All Right Reserved By Kelompok Satu
+		</div>
+		<!-- Copyright -->
+	  </footer>
+</html>

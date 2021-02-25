@@ -1,0 +1,56 @@
+<<<<<<< Updated upstream
+.view {
+    background: #ffffff
+    background-size: cover;
+}
+=======
+
+>>>>>>> Stashed changes
+html,
+body,
+header,
+.view {
+<<<<<<< Updated upstream
+  height: 130px;
+=======
+  height: 55%;
+>>>>>>> Stashed changes
+}
+
+.input-group.md-form.form-sm.form-1 input{
+  border: 1px solid #bdbdbd;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+.input-group.md-form.form-sm.form-2 input {
+  border: 1px solid #bdbdbd;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+.input-group.md-form.form-sm.form-2 input.red-border {
+  border: 1px solid #ef9a9a;
+}
+.input-group.md-form.form-sm.form-2 input.lime-border {
+  border: 1px solid #cddc39;
+}
+.input-group.md-form.form-sm.form-2 input.amber-border {
+  border: 1px solid #ffca28;
+}
+
+.btn-sl{
+  border-radius:50px;
+}
+
+.center-item { 
+            position: absolute; 
+            left: 50%; 
+            transform: translatex(-50%); 
+        } 
+
+.second-navbar {
+  margin-top: 85px;
+}
+
+.second-navbar-top-nav-collapse {
+  margin-top: 45px;
+}

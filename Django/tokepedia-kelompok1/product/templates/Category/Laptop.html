@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  
+
+    <!--Main Navigation-->
+    <br>
+    <div class="container my-4 pt-3">
+        <div class="row pt-3">
+            <!-- <div class="col"></div> -->
+            {% for prodLaptop in Claptop %}
+            <div class="col pr-3 z-depth-1">
+                <a href="{{prodLaptop.id}}">
+                    <img src="{% static prodLaptop.image.url %}" width="150">
+                    <hr>
+                    <p><a href='productDetail/{{prodLaptop.id}}'>{{prodLaptop.name}} </a>
+                        <br><span class="text-warning font-weight-bold">Rp.{{prodLaptop.price_per_unit}}</span>
+                    </p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row pt-5 pb-5">
+            {% for prodLaptop2 in Claptop2 %}
+            <div class="col pr-3 z-depth-1">
+                <a href="{{prodLaptop2.id}}">
+                    <img src="{% static prodLaptop2.image.url %}" width="150">
+                    <hr>
+                    <p><a href='productDetail/{{prodLaptop2.id}}'>{{prodLaptop2.name}}</a>
+                        <br><span class="text-warning font-weight-bold">Rp.{{prodLaptop2.price_per_unit}}</span>
+                    </p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <!--Main Navigation-->
+    <br>
+    <div class="container my-4 pt-3">
+        <div class="row pt-3">
+            <!-- <div class="col"></div> -->
+            {% for prodLogitech in Logitechprod %}
+            <div class="col pr-3 z-depth-1">
+                <a href="{{prodLogitech.id}}">
+                    <img src="{% static prodLogitech.image.url %}" width="150">
+                    <hr>
+                    <p>{{prodLogitech.name}}
+                        <br><span class="text-warning font-weight-bold">Rp.{{prodLogitech.price_per_unit}}</span>
+                    </p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row pt-5 pb-5">
+            {% for prodLogitech2 in Logitechprod2 %}
+            <div class="col pr-3 z-depth-1">
+                <a href="{{prodLogitech2.id}}">
+                    <img src="{% static prodLogitech2.image.url %}" width="150">
+                    <hr>
+                    <p>{{prodLogitech2.name}}
+                        <br><span class="text-warning font-weight-bold">Rp.{{prodLogitech2.price_per_unit}}</span>
+                    </p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <!--Main Navigation-->
+    <br>
+    <div class="container my-4 pt-3">
+        <div class="row pt-3">
+            <!-- <div class="col"></div> -->
+            {% for prodHuawei in Huaweiprod %}
+            <div class="col pr-3 z-depth-1">
+                <a href="{{prodHuawei.id}}">
+                    <img src="{% static prodHuawei.image.url %}" width="150">
+                    <hr>
+                    <p>{{prodHuawei.name}}
+                        <br><span class="text-warning font-weight-bold">Rp.{{prodHuawei.price_per_unit}}</span>
+                    </p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row pt-5 pb-5">
+            {% for prodHuawei2 in Huaweiprod2 %}
+            <div class="col pr-3 z-depth-1">
+                <a href="{{prodHuawei2.id}}">
+                    <img src="{% static prodHuawei2.image.url %}" width="150">
+                    <hr>
+                    <p>{{prodHuawei2.name}}
+                        <br><span class="text-warning font-weight-bold ">Rp.{{prodHuawei2.price_per_unit}}</span>
+                    </p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <footer class="page-footer font-small black fixed-bottom ">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-2 ">© All Right Reserved By Kelompok Satu
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- End your project here-->
+
+    <!-- jQuery -->
+    <script type="text/javascript " src="{% static 'js/jquery.min.js' % "></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript " src="{% static 'js/popper.min.js' %} "></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript " src="{% static 'js/bootstrap.min.js' %} "></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript " src="{% static 'js/mdb.min.js' %} "></script>
+    <!-- Your custom scripts (optional) -->
+    <script type="text/javascript "></script>
+
+    <script src="js/addons/rating.js "></script>
+    <script type="text/javascript " src="{% static 'js/productpage.js' %} "></script>
+</body>
+
+</html>
+{% endblock content %}

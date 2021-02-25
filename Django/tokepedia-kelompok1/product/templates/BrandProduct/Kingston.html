@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <!--Main Navigation-->
+    <br>
+    <div class="container my-4 pt-3">
+        <div class="row pt-3">
+            <!-- <div class="col"></div> -->
+            {% for prodKingston in Kingstonprod %}
+            <div class="col pr-3 z-depth-1">
+                <a href="{{prodKingston.id}}">
+                    <img src="{% static prodKingston.image.url %}" width="150">
+                    <hr>
+                    <p>{{prodKingston.name}}
+                        <br><span class="text-warning font-weight-bold">Rp.{{prodKingston.price_per_unit}}</span>
+                    </p>
+                </a>
+            </div> {% endfor %}
+        </div>
+        <div class="row pt-5 pb-5">
+            {% for prodKingston2 in Kingstonprod2 %}
+            <div class="col pr-3 z-depth-1">
+                <a href="{{prodKingston2.id}}">
+                    <img src="{% static prodKingston2.image.url %}" width="150">
+                    <hr>
+                    <p>{{prodKingston2.name}}
+                        <br><span class="text-warning font-weight-bold">Rp.{{prodKingston2.price_per_unit}}</span>
+                    </p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

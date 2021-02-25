@@ -1,0 +1,246 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+    <!-- Content -->
+    <main>
+
+        <!-- Main Container -->
+        <div class="container z-depth-4 border-0 rounded mb-0">
+
+            <section class="section my-2 pb-3">
+
+                <!-- Shopping Cart table -->
+                <div class="table-responsive">
+
+                    <table class="table product-table">
+
+                        <!-- Table head -->
+                        <thead><br>
+                            <h2><i class="fa fa-map-marker amber-text"></i><b> Location</b></h2>
+                        </thead>
+                        <!-- /.Table head -->
+
+                        <!-- Table body -->
+                        <tbody>
+
+                            <!-- First row -->
+                            <tr>
+                                <td></td>
+                                <td class="align-middle">
+                                    Jennie<br>(+62)8589372238
+                                </td>
+                                <td class="align-middle">Alamatku ada disini kesana kesitu kemari hati hati nanti ada polisi</td>
+                                <td></td>
+                                <td class=" font-weight-bold align-middle" role="button">
+                                    <strong><a href="#" class="amber-text">CHANGE</a></strong>
+                                </td>
+                            </tr>
+                            <!-- /.First row -->
+
+                        </tbody>
+                        <!-- /.Table body -->
+
+                    </table>
+
+                </div>
+                <!-- Shopping Cart table -->
+
+            </section>
+
+        </div>
+
+        <div class="container z-depth-4 border-0 rounded mb-0">
+
+            <section class="section my-4 pb-0">
+
+                <!-- Shopping Cart table -->
+                <div class="table-responsive">
+
+                    <table class="table product-table">
+
+                        <!-- Table head -->
+                        <thead><br>
+                            <h2><b> Ordered Products</b></h2>
+                            <tr>
+                                <th></th>
+                                <th class="font-weight-bold">
+                                    <strong>Product</strong>
+                                </th>
+                                <th class="font-weight-bold">
+                                    <strong></strong>
+                                </th>
+                                <th></th>
+                                <th class="font-weight-bold">
+                                    <strong>Price</strong>
+                                </th>
+                                <th class="font-weight-bold">
+                                    <strong>Quantity</strong>
+                                </th>
+                                <th class="font-weight-bold">
+                                    <strong>Amount</strong>
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <!-- /.Table head -->
+
+                        <!-- Table body -->
+                        <tbody>
+
+                            <!-- First row -->
+                            <tr>
+                                <th scope="row">
+                                    <img src="{% static 'img/laptop1.jpg' %}" alt="" class="img-fluid z-depth-0" width="300">
+                                </th>
+                                <td class="align-middle">
+                                    <h5 class="mt-3">
+                                        <strong>ASUS TUF A15</strong>
+                                    </h5>
+                                    <p class="text-muted">ASUS</p>
+                                </td>
+                                <td class="align-middle">ASUS TUF GAMING A15 FX506IU RYZEN 7 4800H 8GB 256GB+1TB GTX1660Ti 6GB</td>
+                                <td></td>
+                                <td class="align-middle">Rp.17.199.000</td>
+                                <td class="text-center text-md-left align-middle">
+                                    <span class="qty">1 </span>
+                                </td>
+                                <td class="font-weight-bold align-middle">
+                                    <strong>Rp.17.199.000</strong>
+                                </td>
+                            </tr>
+                            <!-- /.First row -->
+
+                            <!-- Second row -->
+                            <tr>
+                                <th scope="row">
+                                    <img src="{% static 'img/logitech.jpg' %}" alt="" class="img-fluid z-depth-0" width="300">
+                                </th>
+                                <td class="align-middle">
+                                    <h5 class="mt-3">
+                                        <strong>Logitech G433</strong>
+                                    </h5>
+                                    <p class="text-muted">Logitech</p>
+                                </td>
+                                <td class="align-middle">Logitech G433 7.1 Surround Gaming Headset - Blue</td>
+                                <td></td>
+                                <td class="align-middle">Rp.1.289.000</td>
+                                <td class="text-center text-md-left align-middle">
+                                    <span class="qty">2 </span>
+                                </td>
+                                <td class="font-weight-bold align-middle">
+                                    <strong>Rp.2.578.000</strong>
+                                </td>
+                            </tr>
+                            <!-- /.Second row -->
+                        </tbody>
+                        <!-- /.Table body -->
+
+                    </table>
+
+                </div>
+                <!-- Shopping Cart table -->
+
+            </section>
+
+        </div>
+
+        <div class="container z-depth-4 border-0 rounded mb-0">
+
+            <section class="section my-4 pb-1">
+
+                <!-- Shopping Cart table -->
+                <div class="table-responsive">
+
+                    <table class="table product-table">
+
+                        <!-- Table head -->
+                        <thead><br>
+                            <h2><b> Payment Method</b></h2>
+                        </thead>
+                        <!-- /.Table head -->
+
+                        <!-- Table body -->
+                        <tbody>
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <div class="list-group rounded mb-0" id="list-tab" role="tablist">
+                                                    <a class="list-group-item list-group-item-light list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">COD</a>
+                                                    <a class="list-group-item list-group-item-light list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Debit/Credit</a>
+                                                    <a class="list-group-item list-group-item-light list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Transfer Bank</a>
+                                                    <a class="list-group-item list-group-item-light list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">E-Money</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="tab-content" id="nav-tabContent">
+                                                    <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                                                        Cash On delivery<br> Pembayaran akan dilakukan kepada kurir ketika barang sudah sampai di rumah.<br> *Syarat dan ketentuan berlaku
+                                                    </div>
+                                                    <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                                                        Debit/Credit<br> Pembayaran menggunakan kartu Debit ataupun Credit. Proses input akan melibatkan beberapa data pribadi.
+                                                    </div>
+                                                    <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                                                        Transfer Bank<br> Pembayaran dengan metode transfer ke bank yang dipilih menggunakan no virtual account yang unik.
+                                                    </div>
+                                                    <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                                                        E-Money<br> Pembayaran menggunakan Third Party Application seperti OVO, Dana, Go-pay.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col"><strong>Delivery Fee</strong></div>
+                                                <div class="col"><strong>: Rp. 20.000</strong></div>
+                                                <div class="w-100"></div>
+                                                <div class="col"><strong>Products</strong></div>
+                                                <div class="col"><strong>: Rp. 19.777.000</strong></div>
+                                                <div class="w-100"></div>
+                                                <div class="col"><br><br><br><br></div>
+                                                <div class="col"> </div>
+                                                <div class="w-100"></div>
+                                                <div class="col"><strong><b>Products</b></strong></div>
+                                                <div class="col"><strong><b>: Rp. 19.797.000</b></strong></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <tr>
+                                <td colspan="3"></td>
+                                <td>
+                                    <h4 class="mt-2">
+                                    </h4>
+                                </td>
+                                <td class="text-right">
+                                </td>
+                                <td colspan="3" class="text-right">
+                                    <button type="button" class="btn btn-warning btn-rounded">Checkout
+                        <i class="fas fa-angle-right right"></i>
+                      </button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                        <!-- /.Table body -->
+
+                    </table>
+
+                </div>
+                <!-- Shopping Cart table -->
+
+            </section>
+
+        </div>
+        <!-- /Main Container -->
+
+
+    </main>
+
+
+    <!-- Content -->
+{% endblock content %}

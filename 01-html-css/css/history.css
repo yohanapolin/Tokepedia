@@ -1,0 +1,95 @@
+<<<<<<< Updated upstream
+
+.container-button{
+	padding-left: 220px;
+	padding-right: 220px;
+}
+
+.container-item{
+	padding-left: 220px;
+	padding-right: 220px;
+}	
+=======
+.merk{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.container-button{
+	padding-left: 170px;
+	padding-right: 170px;
+}
+
+.container-item{
+	padding-left: 170px;
+	padding-right: 170px;
+}
+>>>>>>> Stashed changes
+
+.btn-history {
+	background-color :white;
+}
+
+.Total {
+	color: #FF8C00;
+	font-size: 20px;
+}
+
+.footer-copyright {
+    background-color: white;
+    padding: 5px 0;
+}
+
+.footer-copyright p {
+    color: #969696;
+    margin: 5px 0 0;
+}
+
+.view {
+    background: #ffffff
+    background-size: cover;
+}
+html,
+body,
+header,
+.view {
+  height: 130px;
+}
+
+.input-group.md-form.form-sm.form-1 input{
+  border: 1px solid #bdbdbd;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+.input-group.md-form.form-sm.form-2 input {
+  border: 1px solid #bdbdbd;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+.input-group.md-form.form-sm.form-2 input.red-border {
+  border: 1px solid #ef9a9a;
+}
+.input-group.md-form.form-sm.form-2 input.lime-border {
+  border: 1px solid #cddc39;
+}
+.input-group.md-form.form-sm.form-2 input.amber-border {
+  border: 1px solid #ffca28;
+}
+
+.btn-sl{
+  border-radius:50px;
+}
+
+.center-item { 
+            position: absolute; 
+            left: 50%; 
+            transform: translatex(-50%); 
+        } 
+
+.second-navbar {
+  margin-top: 85px;
+}
+
+.second-navbar-top-nav-collapse {
+  margin-top: 45px;
+}

@@ -1,0 +1,72 @@
+ {% extends "base.html" %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/cart.css' %}">
+<div class="container ">
+    <div class="row">
+        <div class="col-md-12 ">
+            <h4> Your Cart </h4>
+            {% if cart_item.products.exists %}
+            <div class="row">
+                <div class="col-md-7  cart">
+                    <table class="table">
+                        <thead class="amber">
+                            <tr>
+                                <th> </th>
+                                <th class="font-weight-bold"> Item </th>
+                                <th> </th>
+                                <th class="font-weight-bold">Price </th>
+                               <!--- <th class="font-weight-bold">Quantity</th> -->
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {% for product in cart_item.products.all %}
+                            <tr>
+                                <td>
+                                    <div class="far fa-circle fa-1x"> </div>
+                                </td>
+                                <td><img src="{% static product.image.url %}" width="40px">
+                                </td>
+                                <td> <a href="#" class="title-product">{{product.name}} </a>
+                                    {% include 'snippet/remove-cart.html' with product_id=product.id %}
+                                </td>
+                                <td> Rp. {{product.price_per_unit}}</td>
+                                <!--<td><button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus">
+                   <i class="fas fa-minus fa-1x "></i>
+                   </button>
+                                    <input class="quantity" min="0" name="quantity" value="{{product.quantity}}" type="number">
+                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">
+                   <i class="fas fa-plus fa-1x "></i> 
+                   </button>
+                                </td>-->
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="checkout col-md-3 ">
+                    <span class="font-weight-bold"> Subtotal : </span>
+                    <div class="price"><span> Rp. {{ cart_item.subtotal }},00<span>
+         </div>
+         <div class ="price"><span> Rp 20.000,00 <span>
+         </div>
+         <div ><span class ="font-weight-bold"> Total : </span>
+                    </div>
+                    <div class="price">Rp {{ cart_item.total }},00
+                    </div>
+                    <div class="text-center">
+                        <form action="/cart/checkout"> <button type="submit" class=" btn-checkout">Checkout</button> </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% else %}
+<p class='lead'>Cart is empty</p>
+{% endif %}
+
+</body>
+
+ {% endblock %}

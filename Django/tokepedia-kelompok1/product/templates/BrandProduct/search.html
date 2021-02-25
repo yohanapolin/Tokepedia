@@ -1,0 +1,145 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<!-- content -->
+<section id="content" class="content">
+    <div class="container pt-5">
+        <div class="row ">
+            <div class="col">
+                <div class="searchpage_sub">
+                    <strong>&emsp;Popular Search</strong>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for object in Produk %}
+            <div class="col">
+                <a href="{{object.id}}">
+                    <div class="hover-shadow cursor">
+                        <img alt="Bootstrap Image Preview" src="{% static object.image.url %}" width="150px">
+                        <a href="{{object.id}}">
+                            <figcaption class="figure-caption">{{object.name}}</figcaption>
+                        </a>
+                    </div>
+            </div>
+            {% endfor %}
+
+
+
+
+
+            <!-- <div class="col">
+                    <div class="hover-shadow cursor">
+                        <img alt="Bootstrap Image Preview" src="{% static prod.gambar %}" width="150px">
+                        <figcaption class="figure-caption text-center">BDF 10 inch Octa Core powerful</figcaption>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="hover-shadow cursor">
+                        <img alt="Bootstrap Image Preview" src="https://imgfly.scarabresearch.com/w_300/https://img.gkbcdn.com/p/2018-06-25/xiaomi-mi-pad-4-wifi-tablet-pc-4gb-64gb-black-1571983973525._w280_.jpg" width="150px">
+                        <figcaption class="figure-caption text-center">10.1 inch Android 6.0 32GB WIFI</figcaption>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="hover-shadow cursor">
+                        <img alt="Bootstrap Image Preview" src="https://imgfly.scarabresearch.com/w_300/https://img.gkbcdn.com/p/2019-05-14/binai-t133hd-4g-phablet-2gb-32gb-white-black-1571984410021._w280_.jpg" width="150px">
+                        <figcaption class="figure-caption text-center">Lenovo P8 Tab3 8 plus</figcaption>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="hover-shadow cursor">
+                        <img alt="Bootstrap Image Preview" src="https://imgfly.scarabresearch.com/w_300/https://img.gkbcdn.com/p/2019-06-18/binai-g10pro-4g-phablet-4gb-64gb-black-1571985630361._w280_.jpg" width="150px">
+                        <figcaption class="figure-caption text-center">10.1 inch Android 6.0 32GB WIFI</figcaption>
+                    </div>
+                </div> -->
+            <!-- <div class="col">
+                    <div class="hover-shadow cursor">
+                        <img alt="Bootstrap Image Preview" src="https://imgfly.scarabresearch.com/w_300/https://img.gkbcdn.com/p/2019-09-21/teclast-m30-4g-tablet-4gb-ram-128gb-rom-eu-plug-gray-1571993418926._w280_.jpg" width="150px">
+                        <figcaption class="figure-caption text-center">BDF 10 inch Octa Core powerful</figcaption>
+                    </div>
+                </div> -->
+
+            <!-- {% for prodApple in Appleprod %}
+                <div class="col">
+                    <div class="hover-shadow cursor">
+                        <img alt="Bootstrap Image Preview" src="{% static prodApple.image.url %}" width="150px">
+                        <figcaption class="figure-caption">{{prodApple.name}}</figcaption>
+                    </div>
+                </div>
+                {% endfor %} {% for prodSamsung in Samsungprod %}
+                <div class="col">
+                    <div class="hover-shadow cursor">
+                        <img alt="Bootstrap Image Preview" src="{% static prodSamsung.image.url %}" width="150px">
+                        <figcaption class="figure-caption">{{prodSamsung.name}}</figcaption>
+                    </div>
+                </div>
+                {% endfor %} -->
+        </div>
+    </div>
+
+    <br></br>
+
+    <div class="container pb-5">
+        <div class="row ">
+            <div class="col">
+                <div class="searchpage_sub">
+                    <strong>&ensp;Recommended Products</strong>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for object in Produk2 %}
+            <div class="col">
+                <a href="{{object.id}}">
+                    <div class="hover-shadow cursor">
+                        <img alt="Bootstrap Image Preview" src="{% static object.image.url %}" width="150px">
+                        <figcaption class="figure-caption">{{object.name}}</figcaption>
+                </a>
+                </div>
+            </div>
+            {% endfor %}
+            <!-- <div class="col">
+                    <div class="hover-shadow cursor">
+                        <img alt="Bootstrap Image Preview" src="https://imgfly.scarabresearch.com/w_300/https://img.gkbcdn.com/p/2019-05-14/binai-t133hd-4g-phablet-2gb-32gb-white-black-1571984410021._w280_.jpg" width="150px">
+                        <figcaption class="figure-caption text-center">Lenovo P8 Tab3 8 plus</figcaption>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="hover-shadow cursor">
+                        <img alt="Bootstrap Image Preview" src="https://imgfly.scarabresearch.com/w_300/https://img.gkbcdn.com/p/2019-06-18/binai-g10pro-4g-phablet-4gb-64gb-black-1571985630361._w280_.jpg" width="150px">
+                        <figcaption class="figure-caption text-center">10.1 inch Android 6.0 32GB WIFI</figcaption>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="hover-shadow cursor">
+                        <img alt="Bootstrap Image Preview" src="https://imgfly.scarabresearch.com/w_300/https://img.gkbcdn.com/p/2019-09-21/teclast-m30-4g-tablet-4gb-ram-128gb-rom-eu-plug-gray-1571993418926._w280_.jpg" width="150px">
+                        <figcaption class="figure-caption text-center">BDF 10 inch Octa Core powerful</figcaption>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="hover-shadow cursor">
+                        <img alt="Bootstrap Image Preview" src="https://imgfly.scarabresearch.com/w_300/https://img.gkbcdn.com/p/2018-08-18/xiaomi-mi-pad-4-plus-4g-fdd-lte-tablet-pc-4gb-64gb-gold-1571993645257._w280_.jpg" width="150px">
+                        <figcaption class="figure-caption text-center">Lenovo P8 Tab3 8 plus</figcaption>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="hover-shadow cursor">
+                        <img alt="Bootstrap Image Preview" src="https://imgfly.scarabresearch.com/w_300/https://img.gkbcdn.com/p/2019-06-14/teclast-p80x-dual-4g-phablet-2gb-16gb-black-1571986474143._w280_.jpg" width="150px">
+                        <figcaption class="figure-caption text-center">BDF 10 inch Octa Core powerful</figcaption>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="hover-shadow cursor">
+                        <img alt="Bootstrap Image Preview" src="https://imgfly.scarabresearch.com/w_300/https://img.gkbcdn.com/p/2018-06-25/xiaomi-mi-pad-4-wifi-tablet-pc-4gb-64gb-black-1571983973525._w280_.jpg" width="150px">
+                        <figcaption class="figure-caption text-center">10.1 inch Android 6.0 32GB WIFI</figcaption>
+                    </div>
+                </div> -->
+        </div>
+    </div>
+</section>
+<!-- end of content -->
+
+<br></br>
+
+<!-- footer -->
+{% endblock content %}
